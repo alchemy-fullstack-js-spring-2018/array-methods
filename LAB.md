@@ -16,7 +16,7 @@ Implement select array methods from scratch. **Only use**:
 **You must use TDD and good commits for this lab**
 
 The specs for the lab are less onerous than the entire JavaScript specification for the 
-method (for example, no third `array` parameter and index is secondary goal). 
+method (for example, no third `array` parameter and `index` is a challenge goal). 
 
 The "callback signature" refers to the parameter definition of the supplied callback function.
 
@@ -39,7 +39,7 @@ Returns the "mapped" new array.
 Takes a callback of signature `(item) => {}` 
 and creates a new array with all items whose callback returned `true` or a truthy value. 
 
-Any holes in the array should be skipped (don't call the callback function).
+Any holes in the array should be skipped (don't call the callback function, it always "fails" predicate).
 
 Returns the new array of "filtered" items.
 
@@ -48,7 +48,7 @@ Returns the new array of "filtered" items.
 Takes a callback of signature `(item) => {}` 
 and returns the index of the first item whose callback returns `true` or a truthy value.
 
-Any holes in the array should be skipped (don't call the callback function).
+Any holes in the array should be skipped (don't call the callback function, it always "fails" predicate).
 
 Returns the index of the found item, `-1` if no item is found.
 
@@ -94,11 +94,10 @@ Returns `undefined`.
 ### Test indexes
 
 All of these methods can supply the current index as the second (or third in the case of `reduce`) paramter. Test and
-implement this functionality. Since all of these methods (except reduce) have virtually the same implementation for testing whether the callback 
-function was called with the correct index. Can you create a single function in your test file that
+implement this functionality. Since all of these methods (except reduce) have virtually the same implementation for testing whether the callback function was called with the correct index. Can you create a single function in your test file that
 all of the index tests (except reduce) call to test index functionality?
 
-### ADVANCED: Array Holes
+### ADVANCED CHALLENGE: Array Holes
 
 This part of the lab is optional, but recommended if you want to push yourself. Do this part incrementally 
 _after you have completed_ the primary requirements.
