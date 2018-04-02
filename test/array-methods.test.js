@@ -9,4 +9,10 @@ describe('Functional array methods', () => {
         const mapped = func.map(array, x => x + 1);
         assert.deepEqual(mapped, [2, 3, 4, 5, 6]);
     });
+
+    it('maintains hole in array given a callback', () => {
+        const arr = [1, 2,, 3, 4]
+        const mapped = func.map(arr, x => x + 1);
+        assert.deepEqual(mapped, [2, 3, undefined, 4, 5]);
+    });
 });
