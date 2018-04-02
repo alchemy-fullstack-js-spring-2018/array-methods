@@ -15,4 +15,9 @@ describe('Functional array methods', () => {
         const mapped = func.map(arr, x => x + 1);
         assert.deepEqual(mapped, [2, 3, undefined, 4, 5]);
     });
+
+    it('filters array', () => {
+        const filtered = func.filter(array, x => x % 2 === 0);
+        assert.deepEqual(filtered, [2, 4]);
+    });
 });
