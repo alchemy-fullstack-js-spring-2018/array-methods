@@ -6,6 +6,10 @@
     "test": "mocha",
     "start": "npm run test -- -w"
   },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jklipton/array-methods.git"
