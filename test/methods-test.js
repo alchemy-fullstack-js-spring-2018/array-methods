@@ -29,3 +29,10 @@ it('FIND_INDEX - Returns -1 since the array has no even number', () => {
     const noEvenIndex = methods.findIndex(arr, evenNum);
     assert.equal(noEvenIndex, -1);
 });
+
+it('REDUCE - Returns sum of all elements in array', () => {
+    const arr = [1, 2, 3, 4];
+    const sumArray = (total, num) => total + num;
+    const sumTotalOfArray = methods.reduce(arr, sumArray);
+    assert.equal(sumTotalOfArray, 10);
+});
