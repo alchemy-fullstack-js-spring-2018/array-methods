@@ -3,9 +3,12 @@ Array Methods
 
 ## Description
 
+Implement functions that perform array operations similar to how they exist on the built-in JavaScript array object. Main difference is that instead of being methods on the array, they are stand-alone functions that accept an array as well as 
+other required paratmers.
+
 This is a solo assignment. Try and do these from scratch. 
 
-Relevant info is in lab details below.
+Relevant info for each array function is in details below.
 
 Implement select array methods from scratch. **Only use**:
 * `array.length` (read)
