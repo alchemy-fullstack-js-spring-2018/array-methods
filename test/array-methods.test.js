@@ -14,4 +14,10 @@ describe('array methods', () => {
         const result = filter(arr, x => x > 2);
         assert.deepEqual(result, [3]);
     });
+
+    it('find index returns item index that has truthy value of callback', () => {
+        const arr = [1, 2, 3];
+        const result = findIndex(arr, x => x === 2);
+        assert.deepEqual(result, [1]);
+    });
 });
