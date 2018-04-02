@@ -97,7 +97,7 @@ All of these methods can supply the current index as the second (or third in the
 implement this functionality. Since all of these methods (except reduce) have virtually the same implementation for testing whether the callback function was called with the correct index. Can you create a single function in your test file that
 all of the index tests (except reduce) call to test index functionality?
 
-### ADVANCED CHALLENGE: Array Holes
+### Array Holes
 
 This part of the lab is optional, but recommended if you want to push yourself. Do this part incrementally 
 _after you have completed_ the primary requirements.
