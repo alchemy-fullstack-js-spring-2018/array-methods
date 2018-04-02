@@ -1,0 +1,25 @@
+{
+  "name": "array-methods",
+  "version": "1.0.0",
+  "description": "Array Methods: The Scenic Route",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "npm run test -- -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kelihansen/array-methods.git"
+  },
+  "keywords": [],
+  "author": "Keli Hansen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kelihansen/array-methods/issues"
+  },
+  "homepage": "https://github.com/kelihansen/array-methods#readme",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "mocha": "^5.0.5"
+  }
+}
