@@ -28,21 +28,14 @@ describe('arrayMethods', () =>{
         assert.equal(reduced, 15);
     });
 
-
-    it('every', () => {
-        const array = [5, 7, 3, 4];
-
-        const result = every(array, (item) => {
-           
-            if(item > 0) {
-                return true;
-            } else {
-                return false;
-            }
+    it('returns true if all values meet callback criteria', () => {
+        const array = [2, 4, 6, 8];
+        const everyA = arrayMethods.every(array, item => {
+            return item % 2 === 0;
         });
-
-        assert.equal(result, true);
+        assert.equal(everyA, true);
     });
 
+ 
 });
 
