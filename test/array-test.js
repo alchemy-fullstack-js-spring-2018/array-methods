@@ -12,4 +12,11 @@ describe('array-methods', () => {
 
     })
 
+    it('filter', () => {
+
+        const testArray2 = ['red', 'blue', 'yellow', 'green'];
+        const newArray2 = array.filter(testArray2, x => x.length > 4);
+        assert.deepEqual(newArray2, ['yellow', 'green']);
+
+    })
 }); 
