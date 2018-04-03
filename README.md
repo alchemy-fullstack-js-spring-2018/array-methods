@@ -1,5 +1,7 @@
 ## Array Methods
 
-Implementing functions for arrays that are similar to how they already exist in the JavaScript array object
+Implementing functions for arrays better than how JS already does it.
 
 ## Getting Started
+
+Clone down repo and test using mocha!
