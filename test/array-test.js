@@ -43,4 +43,11 @@ describe('array-methods', () => {
         const newArray5 = array.reduce(testArray5,(x, y) => x + y, initialValue);
         assert.deepEqual(newArray5, 13);
     })
+
+    it('every', () => {
+
+        const testArray6  = [1,2,3,4,5,6];
+        const newArray6 = array.every(testArray6, x => x < 10);
+        assert.deepEqual(newArray6, true);
+    })
 }); 
