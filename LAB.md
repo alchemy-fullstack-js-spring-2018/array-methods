@@ -117,4 +117,8 @@ one with holes, and one with the value `undefined` in each element of the array:
 
 The only way to check for a hole is to use `.hasOwnProperty(property)`:
 
+<<<<<<< HEAD
 ![image](https://cloud.githubusercontent.com/assets/478864/26217549/a467d920-3bbc-11e7-9fb6-af2bcd470a52.png)
+=======
+![image](https://cloud.githubusercontent.com/assets/478864/26217549/a467d920-3bbc-11e7-9fb6-af2bcd470a52.png)
+>>>>>>> d40fb337db55fb69a03c7ce402c22cbde9f226d9
