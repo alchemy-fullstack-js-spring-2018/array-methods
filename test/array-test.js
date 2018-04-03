@@ -31,8 +31,16 @@ describe('array-methods', () => {
     it('reduce', ()=> {
 
         // const callback = (accumulator, item) => accumulator + item;
-        testArray4 = [1,2,3,4];
+        const testArray4 = [1,2,3,4];
         const newArray4 = array.reduce(testArray4, (x, y) => x + y)
         assert.deepEqual(newArray4, 10);
+    })
+    
+    it('reduce with initial value', () => {
+
+        const testArray5 = [1,2,3,4];
+        let initialValue = 3;
+        const newArray5 = array.reduce(testArray5,(x, y) => x + y, initialValue);
+        assert.deepEqual(newArray5, 13);
     })
 }); 
