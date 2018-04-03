@@ -15,4 +15,10 @@ describe('array methods', () => {
         const filtered = array.filter(arr, x => x > 2);
         assert.deepEqual(filtered, [3, 4]);
     })
+
+    it('findIndex', () => {
+        const arr = [1, 2, 3, 4];
+        const index = array.findIndex(arr, x => x > 2);
+        assert.equal(index, true);
+    })
 }) 
