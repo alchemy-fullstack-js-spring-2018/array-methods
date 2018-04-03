@@ -60,7 +60,7 @@ describe('array methods', () => {
     });
 
     it('foreach will not run callback for hole in array', () => {
-        const arr = [1,,2,,3];
+        const arr = [1,, 2,, 3];
         let counter = 0;
         foreach(arr, x => {
             counter++;
