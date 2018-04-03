@@ -58,6 +58,28 @@ describe('Functional array methods', () => {
         assert.equal(reduced, 240);
     });
 
+    it('returns true if all values meet callback criteria', () => {
+        const arr = [2, 4, 6, 8];
+        const everied = func.every(arr, item => {
+            return item % 2 === 0;
+        });
+        assert.equal(everied, true);
+    });
 
+    it('skips hole for every', () => {
+        const arr = [2, 4,, 6, 8];
+        const everied = func.every(arr, item => {
+            return item % 2 === 0;
+        });
+        assert.equal(everied, true);
+    });
+
+    it('returns false if any value does not meet callback criteria', () => {
+        const arr = [2, 4, 5, 6, 8];
+        const everied = func.every(arr, item => {
+            return item % 2 === 0;
+        });
+        assert.equal(everied, false);
+    });
 
 });
