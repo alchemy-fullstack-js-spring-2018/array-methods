@@ -25,4 +25,18 @@ describe('reduce', () => {
         const highest = reduce(originalArray, findHighest);
         assert.equal(highest, 5);
     });
+
+    it('can even work with objects', () => {
+        const arrayOfObjects = [
+            { name: 'Marty', letters: 5 },
+            { name: 'Andrew', letters: 6 },
+            { name: 'David', letters: 5 }
+        ];
+        const objectify = (final, individual) => {
+            final[individual.name] = individual.letters;
+            return final;
+        };
+        const singleObject = reduce(arrayOfObjects, objectify, {});
+        assert.deepEqual(singleObject, { Marty: 5, Andrew: 6, David: 5 });
+    });
 });
