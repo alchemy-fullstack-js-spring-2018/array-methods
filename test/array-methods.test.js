@@ -1,4 +1,5 @@
-const assert = require('assert');
+const chai = require('chai');
+const assert = chai.assert;
 const func = require('../lib/array-methods');
 
 describe('Functional array methods', () => {
@@ -80,6 +81,23 @@ describe('Functional array methods', () => {
             return item % 2 === 0;
         });
         assert.equal(everied, false);
+    });
+
+    it('performs callback on each element', () => {
+        const result = [];
+        func.forEach(array, item => {
+            result.push(item);
+        });
+        assert.deepEqual(result, [1, 2, 3, 4, 5]);
+    });
+
+    it('skips holes in forEach', () => {
+        const arr = [1, 2,, 3];
+        const result = [];
+        func.forEach(arr, item => {
+            result.push(item);
+        });
+        assert.deepEqual(result, [1, 2, undefined, 3]);
     });
 
 });
