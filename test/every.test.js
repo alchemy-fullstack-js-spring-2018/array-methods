@@ -8,4 +8,9 @@ describe('every', () => {
         const notEvery = every(array, x => x % 2);
         assert.equal(notEvery, false);
     });
+
+    it('returns true if the callback for every element returns true', () => {
+        const allGood = every(array, x => x < 6);
+        assert.equal(allGood, true);
+    });
 });
