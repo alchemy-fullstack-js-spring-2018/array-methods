@@ -5,7 +5,7 @@ describe('array methods', () => {
     it('filter', () => {
         const testArray = arrayMethods.myFilter(
             [1, 2, 3, 4, 5, 6, 7, 8],
-            (n) => {return (n % 2) === 0;}
+            (n) => (n % 2) === 0
         );
 
         assert.deepEqual(testArray, [2, 4, 6, 8]);
