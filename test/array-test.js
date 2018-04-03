@@ -27,4 +27,10 @@ describe('array methods', () => {
         const reduced = array.reduce(arr, (x, y) => x + y);
         assert.equal(reduced, 10);
     })
+
+    it('every', () => {
+        const arr = [1, 2, 3, 4];
+        const everyNum = array.every(arr, x => x < 6);
+        assert.equal(everyNum, true);
+    })
 }) 
