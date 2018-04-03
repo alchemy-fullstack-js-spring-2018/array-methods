@@ -11,7 +11,7 @@ describe('every', () => {
     it('returns true if all elements match', () => {
         const arr = [2, 2, 2, 2];
         const allEven = every(arr, isEven);
-        assert.equal(allEven, false);
+        assert.equal(allEven, true);
     })
     ;
 
