@@ -8,7 +8,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha",
+    "test": "mocha test/methods-test-mvp test/methods-test-challenge",
     "start": "npm run test -- -w"
   },
   "repository": {
