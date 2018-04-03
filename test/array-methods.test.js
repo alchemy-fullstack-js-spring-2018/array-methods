@@ -3,6 +3,8 @@ const map = require('../lib/map');
 const filter = require('../lib/filter');
 const findIndex = require('../lib/findIndex');
 const every = require('../lib/every');
+const reduce = require('../lib/reduce');
+const foreach = require('../lib/foreach');
 
 describe('array methods', () => {
     it('map returns array of elements modified by callback', () => {
@@ -37,23 +39,23 @@ describe('array methods', () => {
 
     it('every returns false if falsy item in array', () => {
         const arr = [1, 2, 3];
-        const result = every(arr, x => x === 1);
+        const result = every(arr, x => x < 1);
         assert.equal(result, false);
     });
 
-    // it('reduce takes a callback and arr and returns single value', () => {
-    //     const arr = [1, 2, 3];
-    //     const result = reduce(arr, (acc, curr) => acc + curr);
-    // });
+    it('reduce takes a callback and arr and returns single value', () => {
+        const arr = [1, 2, 3];
+        const result = reduce(arr, (acc, curr) => acc + curr);
+        assert.equal(result, 6);
+    });
 
-    // it('findIndex ignores empty spaces in array', () => {
-    //     let callCount = 0;
-    //     const callback = x => x === 3;
-    //     const arr = [1, ,2, 3];
-    //     const result = findIndex(arr, x => {
-    //         callCount ++;
-    //         callback(x);
-    //     });
-    //     assert.deepEqual(callCount, 3);
-    // });
+    it('foreach calls the callback for each element', () => {
+        const arr = [1, 2, 3];
+        let counter = 0;
+        foreach(arr, x => {
+            counter++;
+            x + 1;
+        });
+        assert.equal(counter, 3);
+    });
 });
