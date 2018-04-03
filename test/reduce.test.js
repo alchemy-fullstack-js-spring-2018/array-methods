@@ -15,4 +15,8 @@ describe('reduce', () => {
         assert.equal(arraySum, 106);
     });
  
+    it('adds numerical elements of an array when no initial value is provided', () => {
+        const arraySum = reduce(originalArray, callback);
+        assert.equal(arraySum, 6);
+    }); 
 });
