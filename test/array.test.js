@@ -14,15 +14,12 @@ describe('arrayMethods', () =>{
         assert.deepEqual(filterA, [2, 4, 6, 8, 10]);
     });
     
-    it('returns index of element', () => {
-        const array = [4, 5, 8];
-        const result = arrayMethods.findIndex(array, (item) => {
-            if(item === 5){
-                return true;
-            }
-        });
-        assert.equal(result, 1);
+    it('finds the index of an item in array', () => {
+        const array = [1, 2, 3, 4, 5];
+        const index = arrayMethods.findIndex(array, 4);
+        assert.equal(index, 3);
     });
+
 
     it('reduce to singal value', () => {
         const array = [1, 2, 3, 4];
