@@ -28,15 +28,16 @@ describe('reduce', () => {
 
     it('can even work with objects', () => {
         const arrayOfObjects = [
-            { name: 'Marty', letters: 5 },
-            { name: 'Andrew', letters: 6 },
-            { name: 'David', letters: 5 }
+            { name: 'Marty', role: 'instructor' },
+            { name: 'Andrew', role: 'TA' },
+            { name: 'David', role: 'TA' },
+            { name: 'Keli', role: 'student' }
         ];
-        const objectify = (final, individual) => {
-            final[individual.name] = individual.letters;
-            return final;
+        const amalgamate = (amalgamation, individual) => {
+            amalgamation[individual.name] = individual.role;
+            return amalgamation;
         };
-        const singleObject = reduce(arrayOfObjects, objectify, {});
-        assert.deepEqual(singleObject, { Marty: 5, Andrew: 6, David: 5 });
+        const singleObject = reduce(arrayOfObjects, amalgamate, {});
+        assert.deepEqual(singleObject, { Marty: 'instructor', Andrew: 'TA', David: 'TA', Keli: 'student' });
     });
 });
