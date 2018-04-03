@@ -25,6 +25,13 @@ describe('array methods', () => {
         assert.deepEqual(result, [10]);
     });
 
+    it('filter failure', () => {
+        const isEven = x => x % 2 === 0;
+        const result = filter(odds, isEven);
+    
+        assert.deepEqual(result, []);
+    });
+
     it('find index function', () => {
         const isEven = x => x % 2 === 0;
         const result = findIndex(array, isEven);
