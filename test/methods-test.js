@@ -66,4 +66,16 @@ describe('CHALLENGE - ARRAYS WITH HOLES', () => {
         assert.deepEqual(squaredArray, [1, 4, , 9]);
     });
 
+    it('FILTER - Returns a new array where the numbers are even', () => {
+        const arr = [1, , 2, 3, 4];
+        const evenArray = methods.filter(arr, evenNum);
+        assert.deepEqual(evenArray, [2, 4]);
+    });
+
+    it('FIND_INDEX - Returns index of first number that is even', () => {
+        const arr = [1, , 2, 3, 4];
+        const evenIndex = methods.findIndex(arr, evenNum);
+        assert.equal(evenIndex, 2);
+    });
+
 });
