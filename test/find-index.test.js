@@ -9,6 +9,5 @@ describe('find-index', () => {
         const indexNumber = findIndex(arr, equalsEight);
         
         assert.deepEqual(indexNumber, 3);
-
     });
 });
