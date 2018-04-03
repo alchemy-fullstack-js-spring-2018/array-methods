@@ -43,3 +43,15 @@ it('REDUCE - Returns sum of all elements in array with an initial accumulator', 
     const sumTotalOfArray = methods.reduce(arr, sumArray, 5);
     assert.equal(sumTotalOfArray, 15);
 });
+
+it('EVERY - Returns true if every element in array is even', () => {
+    const arr = [2, 4, 6];
+    const allEvenArray = methods.every(arr, evenNum);
+    assert.equal(allEvenArray, true);
+});
+
+it('EVERY - Returns false if any element in array is NOT even', () => {
+    const arr = [2, 4, 7];
+    const allEvenArray = methods.every(arr, evenNum);
+    assert.equal(allEvenArray, false);
+});
