@@ -3,7 +3,7 @@ const map = require('../lib/map');
 
 describe('map', () => {
 
-    it('return', () => {
+    it('returns an array that is double the original array', () => {
         const arr = [1, 2, 3, 4];
         const doubled = item => item * 2;
         const mapped = map(arr, doubled);
