@@ -27,4 +27,12 @@ describe('array-methods', () => {
         assert.deepEqual(newArray3, 2);
 
     })
+
+    it('reduce', ()=> {
+
+        // const callback = (accumulator, item) => accumulator + item;
+        testArray4 = [1,2,3,4];
+        const newArray4 = array.reduce(testArray4, (x, y) => x + y)
+        assert.deepEqual(newArray4, 10);
+    })
 }); 
