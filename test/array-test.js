@@ -19,6 +19,12 @@ describe('array methods', () => {
     it('findIndex', () => {
         const arr = [1, 2, 3, 4];
         const index = array.findIndex(arr, x => x > 2);
-        assert.equal(index, true);
+        assert.equal(index, 2);
+    })
+
+    it('reduce', () => {
+        const arr = [1, 2, 3, 4];
+        const reduced = array.reduce(arr, (x, y) => x + y);
+        assert.equal(reduced, 10);
     })
 }) 
