@@ -53,6 +53,20 @@ describe('array methods', () => {
         assert.deepEqual(result, 30);
     });
 
+    it('reduce function with single value', () => {
+        const callback = (sum, currentNum) => sum + currentNum;
+        const result = reduce([5], callback);
+    
+        assert.deepEqual(result, 5);
+    });
+
+    it('reduce function with single value and initial', () => {
+        const callback = (sum, currentNum) => sum + currentNum;
+        const result = reduce([5], callback, 2);
+    
+        assert.deepEqual(result, 7);
+    });
+
     it('every function true', () => {
         const isEven = x => x % 2 === 0;
         const result = every(evens, isEven);
