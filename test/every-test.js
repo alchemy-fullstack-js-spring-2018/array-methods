@@ -8,6 +8,6 @@ describe('array methods', () => {
             (n) => (n % 2) === 0
         );
 
-        assert.equal(result === true);
+        assert.equal(result, true);
     });
 });
