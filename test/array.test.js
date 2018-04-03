@@ -20,14 +20,14 @@ describe('arrayMethods', () =>{
         assert.equal(index, 3);
     });
 
-
-    it('reduce to singal value', () => {
-        const array = [1, 2, 3, 4];
-        const result = reduce(array, (sum, num, i) => {
+    it('reduces with addition', () => {
+        const array = [1, 2, 3, 4, 5];   
+        const reduced = arrayMethods.reduce(array, (sum, num)  => {
             return sum + num;
         });
-        assert.equal(result, 10);
+        assert.equal(reduced, 15);
     });
+
 
     it('every', () => {
         const array = [5, 7, 3, 4];
