@@ -5,10 +5,10 @@ describe('array-methods', () => {
 
     it('map', () => {
     
-        const testArray = [2, 3, ,6, 5];
-        // const mapArray = array.map(testArray)
-        const mappedArray = testArray.map(x => x * 2);
         
+        const testArray = [2, 3, 6, 5];
+        const newArray = array.map(testArray, x => x * x);
+        assert.equal(newArray, [4, 9, 36, 25]);
 
     })
 
