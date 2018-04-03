@@ -1,3 +1,5 @@
+/* eslint no-sparse-arrays: "off", array-bracket-spacing: "off" */
+
 const assert = require('assert');
 const methods = require('../lib/methods');
 
@@ -52,7 +54,7 @@ describe('CHALLENGE - ARRAYS WITH HOLES', () => {
     });
 
     it('EVERY - Returns false if any element in array is NOT even', () => {
-        const arr = [2, 4, 7, ,];
+        const arr = [2, 4, 7, , ];
         const allEvenArray = methods.every(arr, evenNum);
         assert.equal(allEvenArray, false);
     });
