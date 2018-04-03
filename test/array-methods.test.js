@@ -26,4 +26,38 @@ describe('Functional array methods', () => {
         const filtered = func.filter(arr, x => x % 2 === 0);
         assert.deepEqual(filtered, [2, 4]);
     });
+
+    it('finds the index of an item in array', () => {
+        const index = func.findIndex(array, 4);
+        assert.equal(index, 3);
+    });
+
+    it('returns -1 if item not present in array', () => {
+        const index = func.findIndex(array, 6);
+        assert.equal(index, -1);
+    });
+
+    it('reduces with addition', () => {
+        const reduced = func.reduce(array, (sum, num)  => {
+            return sum + num;
+        });
+        assert.equal(reduced, 15);
+    });
+
+    it('reduces with multiplication', () => {
+        const reduced = func.reduce(array, (sum, num)  => {
+            return sum * num;
+        });
+        assert.equal(reduced, 120);
+    });
+    
+    it('reduces with multiplication and optional init', () => {
+        const reduced = func.reduce(array, (sum, num)  => {
+            return sum * num;
+        }, 2);
+        assert.equal(reduced, 240);
+    });
+
+
+
 });
