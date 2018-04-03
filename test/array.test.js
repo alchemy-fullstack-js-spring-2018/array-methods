@@ -3,7 +3,7 @@ const map = require('../lib/map');
 const findIndex = require('../lib/findIndex');
 const filter = require('../lib/filter');
 const every = require('../lib/every');
-// const reduce = require('../lib/reduce');
+const reduce = require('../lib/reduce');
 
 describe('array methods', () => {
     it('map', () => {
@@ -45,13 +45,13 @@ describe('array methods', () => {
         assert.equal(result, false);
     });
 
-    // it('reduce', () => {
-    //     const array = [0, 1, 2, 3];
+    it('reduce', () => {
+        const array = [0, 1, 2, 3];
 
-    //     const result = reduce(array, (sum, num)  => {
-    //         return sum + num;
-    //     });
+        const result = reduce(array, (sum, num)  => {
+            return sum + num;
+        });
         
-    //     assert.equal(result, 15);
-    // });
+        assert.equal(result, 6);
+    });
 });
