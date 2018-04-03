@@ -30,9 +30,16 @@ it('FIND_INDEX - Returns -1 since the array has no even number', () => {
     assert.equal(noEvenIndex, -1);
 });
 
-it('REDUCE - Returns sum of all elements in array', () => {
+it('REDUCE - Returns sum of all elements in array with NO initial accumulator', () => {
     const arr = [1, 2, 3, 4];
     const sumArray = (total, num) => total + num;
     const sumTotalOfArray = methods.reduce(arr, sumArray);
     assert.equal(sumTotalOfArray, 10);
+});
+
+it('REDUCE - Returns sum of all elements in array with an initial accumulator', () => {
+    const arr = [1, 2, 3, 4];
+    const sumArray = (total, num) => total + num;
+    const sumTotalOfArray = methods.reduce(arr, sumArray, 5);
+    assert.equal(sumTotalOfArray, 15);
 });
