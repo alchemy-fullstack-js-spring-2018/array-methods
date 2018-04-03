@@ -19,4 +19,12 @@ describe('array-methods', () => {
         assert.deepEqual(newArray2, ['yellow', 'green']);
 
     })
+
+    // it('findIndex', () => {
+
+    //     const testArray3 = [];
+    //     const newArray3 = array.findIndex();
+    //     assert.deepEqual(newArray3, []);
+
+    // })
 }); 
