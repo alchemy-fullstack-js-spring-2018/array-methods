@@ -58,4 +58,14 @@ describe('array methods', () => {
         });
         assert.equal(counter, 3);
     });
+
+    it('foreach will not run callback for hole in array', () => {
+        const arr = [1,,2,,3];
+        let counter = 0;
+        foreach(arr, x => {
+            counter++;
+            x + 1;
+        });
+        assert.equal(counter, 3);
+    });
 });
