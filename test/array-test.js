@@ -20,11 +20,11 @@ describe('array-methods', () => {
 
     })
 
-    // it('findIndex', () => {
+    it('findIndex', () => {
 
-    //     const testArray3 = [];
-    //     const newArray3 = array.findIndex();
-    //     assert.deepEqual(newArray3, []);
+        const testArray3 = [3, 26, 75, 4];
+        const newArray3 = array.findIndex(testArray3, x => x > 27 );
+        assert.deepEqual(newArray3, 2);
 
-    // })
+    })
 }); 
