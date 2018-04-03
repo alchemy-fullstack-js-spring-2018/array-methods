@@ -8,4 +8,9 @@ describe('find index', () => {
         const defaultIndex = findIndex(array, x => x > 5);
         assert.equal(defaultIndex, -1);
     });
+
+    it('returns the index of the first item whose callback is truthy', () => {
+        const firstOddIndex = findIndex(array, x => x % 2);
+        assert.equal(firstOddIndex, 1);
+    });
 });
