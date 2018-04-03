@@ -13,4 +13,9 @@ describe('filter', () => {
         const evenArray = filter(originalArray, x => !(x % 2));
         assert.deepEqual(evenArray, [0, 2, 4, 6, 4, 2, 0]);
     });
+
+    it('returns an empty array if no items pass the test', () => {
+        const emptyArray = filter(originalArray, x => x > 6);
+        assert.deepEqual(emptyArray, []);
+    });
 });
