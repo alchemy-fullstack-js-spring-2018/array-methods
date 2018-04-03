@@ -54,10 +54,18 @@ describe('array methods', () => {
     it('reduce', () => {
         let array = [1, 2, 1, 1];
 
-        const result = reduce(array, accumulator => {
-            return reduce(array, accumulator);
+        const result = reduce(array, (accumulator, item) => {
+            return accumulator += item;
         });
 
         assert.equal(result, 5);
+    });
+
+    it('reduce subtract', () => {
+        let array = [1, 1, 1, 1, 1];
+        const result = reduce(array, (accumulator, item) => {
+            return accumulator = accumulator - item;
+        }, 5);
+        assert.equal(result, 0);
     });
 });
