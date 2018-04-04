@@ -7,8 +7,7 @@ const evenNum = x => x % 2 === 0;
 describe('MVP', () => {
     it('MAP - Returns a new array of each number squared', () => {
         const arr = [1, 2, 3];
-        const squareNum = x => x * x;
-        const squaredArray = methods.map(arr, squareNum);
+        const squaredArray = methods.map(arr, x => x * x);
         assert.deepEqual(squaredArray, [1, 4, 9]);
     });
 
@@ -32,15 +31,13 @@ describe('MVP', () => {
 
     it('REDUCE - Returns sum of all elements in array with NO initial accumulator', () => {
         const arr = [1, 2, 3, 4];
-        const sumArray = (total, num) => total + num;
-        const sumTotalOfArray = methods.reduce(arr, sumArray);
+        const sumTotalOfArray = methods.reduce(arr, (total, num) => total + num);
         assert.equal(sumTotalOfArray, 10);
     });
 
     it('REDUCE - Returns sum of all elements in array with an initial accumulator', () => {
         const arr = [1, 2, 3, 4];
-        const sumArray = (total, num) => total + num;
-        const sumTotalOfArray = methods.reduce(arr, sumArray, 5);
+        const sumTotalOfArray = methods.reduce(arr, (total, num) => total + num, 5);
         assert.equal(sumTotalOfArray, 15);
     });
 
