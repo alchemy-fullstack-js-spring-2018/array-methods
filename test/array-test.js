@@ -32,8 +32,8 @@ describe('array-methods', () => {
 
         // const callback = (accumulator, item) => accumulator + item;
         const testArray4 = [1,2,3,4];
-        const newArray4 = array.reduce(testArray4, (x, y) => x + y)
-        assert.deepEqual(newArray4, 10);
+        const newArray4 = array.reduce(testArray4, (x, y) => x * y)
+        assert.deepEqual(newArray4, 24);
     })
     
     it('reduce with initial value', () => {
@@ -50,6 +50,14 @@ describe('array-methods', () => {
         const newArray6 = array.every(testArray6, x => x < 10);
         assert.deepEqual(newArray6, true);
 
+    })
+
+    //this test should result in a fail on the every method function. 
+    it('every failed test', () => {
+
+        const testArray7 = [1,70,3];
+        const newArray7 = array.every(testArray7, x => x < 10);
+        assert.deepEqual(newArray7, true);
     })
   
 }); 
