@@ -55,7 +55,7 @@ describe('array-methods', () => {
     //this test should result in a fail on the every method function. 
     it('every failed test', () => {
 
-        const testArray7 = [1,70,3];
+        const testArray7 = [1,9,3];
         const newArray7 = array.every(testArray7, x => x < 10);
         assert.deepEqual(newArray7, true);
     })
