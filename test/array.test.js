@@ -48,9 +48,7 @@ describe('array methods', () => {
     it('reduce', () => {
         const array = [0, 1, 2, 3];
 
-        const result = reduce(array, (sum, num)  => {
-            return sum + num;
-        });
+        const result = reduce(array, (acc, curr) => acc + curr);
         
         assert.equal(result, 6);
     });
