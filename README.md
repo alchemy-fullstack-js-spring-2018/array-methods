@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Array Methods
 ===
 
@@ -15,3 +16,6 @@ returns the index of the first element in the array that satisfies the provided 
 
 ### `reduce`
 applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value.
+=======
+# array-methods
+>>>>>>> 4254a1f830e69f448704d9dc227dabe723fb65ed
